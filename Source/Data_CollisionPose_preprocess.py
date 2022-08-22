@@ -3,7 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # with open('../Data/AgentStop_Ped10/CollisionPose.csv') as Rcsvfile:
-with open('../Data/AgentStop_Ped20/CollisionPose.csv') as Rcsvfile:
+with open('../Data/AgentStop_Ped15/CollisionPose.csv') as Rcsvfile:
+# with open('../Data/AgentStop_Ped20/CollisionPose.csv') as Rcsvfile:
+
     spamreader = csv.reader(Rcsvfile)
 
     for row in spamreader:

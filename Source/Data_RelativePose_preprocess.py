@@ -2,7 +2,8 @@ import csv
 import numpy as np
 
 # with open('../Data/AgentStop_Ped10/RelativePose.csv') as Rcsvfile:
-with open('../Data/AgentStop_Ped20/RelativePose.csv') as Rcsvfile:
+with open('../Data/AgentStop_Ped15/RelativePose.csv') as Rcsvfile:
+# with open('../Data/AgentStop_Ped20/RelativePose.csv') as Rcsvfile:
 
     spamreader = csv.reader(Rcsvfile)
 
