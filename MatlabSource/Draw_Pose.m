@@ -12,9 +12,24 @@ clc, clear, close all
 % M_rOverlap = readmatrix("..\Result\R_AgentStop_Ped15\wOverlaps.csv");
 
 % Stop Ped 20
-M_rColPose = readmatrix("..\Result\R_AgentStop_Ped20\wColPose.csv"); % M_r: Matlab_read
-M_rRelPose = readmatrix("..\Result\R_AgentStop_Ped20\wRelPose.csv");
-M_rOverlap = readmatrix("..\Result\R_AgentStop_Ped20\wOverlaps.csv");
+% M_rColPose = readmatrix("..\Result\R_AgentStop_Ped20\wColPose.csv"); % M_r: Matlab_read
+% M_rRelPose = readmatrix("..\Result\R_AgentStop_Ped20\wRelPose.csv");
+% M_rOverlap = readmatrix("..\Result\R_AgentStop_Ped20\wOverlaps.csv");
+
+% Move Ped 10
+% M_rColPose = readmatrix("..\Result\R_AgentMove_Ped10\wColPose.csv"); % M_r: Matlab_read
+% M_rRelPose = readmatrix("..\Result\R_AgentMove_Ped10\wRelPose.csv");
+% M_rOverlap = readmatrix("..\Result\R_AgentMove_Ped10\wOverlaps.csv");
+
+% Move Ped 15
+% M_rColPose = readmatrix("..\Result\R_AgentMove_Ped15\wColPose.csv"); % M_r: Matlab_read
+% M_rRelPose = readmatrix("..\Result\R_AgentMove_Ped15\wRelPose.csv");
+% M_rOverlap = readmatrix("..\Result\R_AgentMove_Ped15\wOverlaps.csv");
+
+% Move Ped 20
+M_rColPose = readmatrix("..\Result\R_AgentMove_Ped20\wColPose.csv"); % M_r: Matlab_read
+M_rRelPose = readmatrix("..\Result\R_AgentMove_Ped20\wRelPose.csv");
+M_rOverlap = readmatrix("..\Result\R_AgentMove_Ped20\wOverlaps.csv");
 
 %% Preprocessing
 ColDataSize = size(M_rColPose);
@@ -91,7 +106,7 @@ for repeat = 1:ColDataSize(1)
 end
 
 %% Plot
-plot(x_axisRel, y_axisRel, 'x', 'Color', 'b'); % Draw Distribution
+% plot(x_axisRel, y_axisRel, 'x', 'Color', 'b'); % Draw Distribution
 
 plot(MainCenterX, MainCentery, 'k+', 'LineWidth', 3, 'MarkerSize', 14);
 

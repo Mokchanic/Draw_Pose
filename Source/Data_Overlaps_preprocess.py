@@ -3,8 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # with open('../Data/AgentStop_Ped10/Overlap.csv') as Rcsvfile:
-with open('../Data/AgentStop_Ped15/Overlap.csv') as Rcsvfile:
+# with open('../Data/AgentStop_Ped15/Overlap.csv') as Rcsvfile:
 # with open('../Data/AgentStop_Ped20/Overlap.csv') as Rcsvfile:
+# with open('../Data/AgentMove_Ped10/Overlap.csv') as Rcsvfile:
+# with open('../Data/AgentMove_Ped15/Overlap.csv') as Rcsvfile:
+with open('../Data/AgentMove_Ped20/Overlap.csv') as Rcsvfile:
 
     spamreader = csv.reader(Rcsvfile)
 
