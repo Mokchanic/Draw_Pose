@@ -28,8 +28,11 @@ clc, clear, close all
 
 % Move Ped 20
 M_rColPose = readmatrix("..\Result\R_AgentMove_Ped20\wColPose.csv"); % M_r: Matlab_read
-M_rRelPose = readmatrix("..\Result\R_AgentMove_Ped20\wRelPose.csv");
+% M_rRelPose = readmatrix("..\Result\R_AgentMove_Ped20\wRelPose.csv");
 M_rOverlap = readmatrix("..\Result\R_AgentMove_Ped20\wOverlaps.csv");
+
+% Overlap Pose
+M_rRelPose = readmatrix("..\Result\wPedOverlap.csv");
 
 %% Preprocessing
 ColDataSize = size(M_rColPose);
@@ -90,23 +93,23 @@ plot(x3, y3, 'k', 'LineWidth', 2, 'LineStyle','--');
 hold on;
 
 %% Collision Circle
-radius = 5;
-
-for repeat = 1:ColDataSize(1)
-    x = radius * cos(angles) + x_axisCol(repeat);
-    y = radius * sin(angles) + y_axisCol(repeat);
-
-    R_color = numberOverlap(repeat)/MaxOverlap;
-    G_color = 1 - (numberOverlap(repeat)/MaxOverlap);
-    
-    patch(x, y, [R_color,G_color,0]); % RGB Color Input
-
-    plot(x, y, 'k', 'LineWidth', 1);
-    hold on;
-end
+% radius = 5;
+% 
+% for repeat = 1:ColDataSize(1)
+%     x = radius * cos(angles) + x_axisCol(repeat);
+%     y = radius * sin(angles) + y_axisCol(repeat);
+% 
+%     R_color = numberOverlap(repeat)/MaxOverlap;
+%     G_color = 1 - (numberOverlap(repeat)/MaxOverlap);
+%     
+%     patch(x, y, [R_color,G_color,0]); % RGB Color Input
+% 
+%     plot(x, y, 'k', 'LineWidth', 1);
+%     hold on;
+% end
 
 %% Plot
-% plot(x_axisRel, y_axisRel, 'x', 'Color', 'b'); % Draw Distribution
+plot(x_axisRel, y_axisRel, 'x', 'Color', 'b'); % Draw Distribution
 
 plot(MainCenterX, MainCentery, 'k+', 'LineWidth', 3, 'MarkerSize', 14);
 
