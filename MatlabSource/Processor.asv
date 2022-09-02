@@ -1,6 +1,6 @@
 clc, clear, close all;
 %%
-Data_num = 1;
+Data_num = 4;
 Process_Data_num = Data_num - 1;
 
 location_data_pile = zeros(Data_num, 3, 8000);
@@ -21,7 +21,6 @@ remain_loaction = location_data_pile(2:Data_num, 1:2, :);
 ped1_local = zeros(Process_Data_num, 2, n(2));
 
 
-%%
 
 % for ped_num = 1:Process_Data_num
 %     for time = 1:n(2)

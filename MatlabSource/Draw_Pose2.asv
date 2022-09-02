@@ -1,0 +1,20 @@
+clc, clear, close all
+%% Variables
+people_num = 1;
+
+for i = 1:people_num
+    file_name = sprintf('../Data/All_Peddata/%dcomplete.csv', i);
+    
+
+
+end
+
+%% plot test
+
+% a = reshape_location_data(1,:);
+% b = reshape_location_data(2,:);
+% 
+% plot(a,b,'o');
+% 
+% xlim([-2000, 2000]);
+% ylim([-150, 150]);
