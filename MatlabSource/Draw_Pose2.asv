@@ -3,8 +3,9 @@ clc, clear, close all
 countMatrix = zeros(300:300);
 countSize = size(countMatrix);
 
-file_name = sprintf('../Data/All_Peddata/3m_ped20_1.csv');
-location_data = readmatrix(file_name);
+file_name = '3m_ped20.csv';
+file_path = sprintf('../Data/All_Peddata/%s',file_name);
+location_data = readmatrix(file_path);
 size = size(location_data);
 
 location_data(:, size(2)) = [];
@@ -218,8 +219,10 @@ grid minor
 
 %% Write Data
 % ... Write number Overlap data
-wFilename = "Overlap";
-rows = ['0 ~ 15', '15 ~ 30', '30 ~ 45', '45 ~ 60', '60 ~ 75', '75 ~ 90', '105 ~ 120', ...
-    '135 ~ 150', '165 ~ 180', '180 ~ 195', '195 ~ 210', '210 ~ 225', '225 ~ 240', '240 ~ 255', '255 ~ 270', '15 ~ 30'];
+wFilename = sprintf("../Data/Overlap_Data/Overlap_%s", file_name);
 
-sumData = [rows; Boundary1Boundary2; Boundary2Boundary3; Boundary3ColBoundary];
+string_cols = ["0 ~ 15" "15 ~ 30" "30 ~ 45" "45 ~ 60" "60 ~ 75" "75 ~ 90" "90 ~ 105" "105 ~ 120" "120 ~ 135" "135 ~ 150" "150 ~ 165" "165 ~ 180" ...
+    "180 ~ 195" "195 ~ 210" "210 ~ 225" "225 ~ 240" "240 ~ 255" "255 ~ 270" "270 ~ 285" "285 ~ 300" "300 ~ 315" "315 ~ 330" "330 ~ 345" "345 ~ 360"];
+
+sumData = [string_cols; Boundary1Boundary2; Boundary2Boundary3; Boundary3ColBoundary];
+writematrix(sumData, wFilename)

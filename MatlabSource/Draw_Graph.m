@@ -8,18 +8,24 @@ overlap_data = readcell(file_path);
 data_processing = [overlap_data(2,:); overlap_data(3,:); overlap_data(4,:)];
 data_processing_transpose = transpose(data_processing);
 
-% X = categorical(["0 ~ 15" "15 ~ 30" "30 ~ 45" "45 ~ 60" "60 ~ 75" "75 ~ 90" "90 ~ 105" "105 ~ 120" "120 ~ 135" "135 ~ 150" "150 ~ 165" "165 ~ 180" ...
-%     "180 ~ 195" "195 ~ 210" "210 ~ 225" "225 ~ 240" "240 ~ 255" "255 ~ 270" "270 ~ 285" "285 ~ 300" "300 ~ 315" "315 ~ 330" "330 ~ 345" "345 ~ 360"]);
-
 X = categorical(overlap_data(1,:));
+X = reordercats(X, overlap_data(1,:)); % X
+
 Y = cell2mat(data_processing_transpose);
 
 %% bar plot
-b = bar(X, Y, 1);
+% b = bar(X, Y, 1);
+% hold on;
 
-barLegend = ["r = 55.5 ~ 77", "r = 77 ~ 98.5", "r = 98.5 ~ 120"];
 
-legend(barLegend)
-axis equal
+%% plot
+plot(X,Y);
+ylim([0,1000]);
+hold on;
+
 grid on
-grid minor
+grid minor;
+
+% barLegend = ["r = 55.5 ~ 77", "r = 77 ~ 98.5", "r = 98.5 ~ 120"];
+barLegend = ["boundary1", "boundary2", "boundary3"];
+legend(barLegend)
