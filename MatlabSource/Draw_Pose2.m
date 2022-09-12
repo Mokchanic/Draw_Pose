@@ -3,7 +3,7 @@ clc, clear, close all
 countMatrix = zeros(300:300);
 countSize = size(countMatrix);
 
-file_name = '7m_ped20.csv';
+file_name = '3m_ped20_2.csv';
 file_path = sprintf('../Data/All_Peddata/%s',file_name);
 location_data = readmatrix(file_path);
 size = size(location_data);

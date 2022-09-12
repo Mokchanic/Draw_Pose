@@ -19,7 +19,7 @@ Y = cell2mat(data_processing_transpose);
 
 
 %% plot
-plot(X,Y);
+plot(X,Y,'LineWidth',3);
 ylim([0,1000]);
 hold on;
 
